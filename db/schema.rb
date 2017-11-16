@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20171116184327) do
     t.string   "country"
     t.string   "zipcode"
     t.boolean  "active",                              default: true
+    t.string   "api_id"
     t.datetime "created_at",                                         null: false
     t.datetime "updated_at",                                         null: false
   end
