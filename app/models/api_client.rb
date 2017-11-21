@@ -16,7 +16,7 @@ class ApiClient
     if valid_response?
       return @api_response
     else
-      raise ApiError.new(response.message)
+      raise ApiError.new(@api_response.message)
     end
   end
 
