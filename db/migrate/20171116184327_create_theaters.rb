@@ -11,7 +11,6 @@ class CreateTheaters < ActiveRecord::Migration[5.0]
       t.string  :country
       t.string  :zipcode
       t.boolean :active, default: true
-      t.string  :api_id
 
       t.timestamps
     end
