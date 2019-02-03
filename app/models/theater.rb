@@ -1,3 +1,0 @@
-class Theater < ApplicationRecord
-
-end
