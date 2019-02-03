@@ -10,9 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 0) do
+=======
+ActiveRecord::Schema.define(version: 20171116184327) do
+>>>>>>> parent of 72bbe78... add movie model and migration; helper to build movie from api response
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
+=======
+  create_table "theaters", force: :cascade do |t|
+    t.string   "name",                                               null: false
+    t.string   "phone"
+    t.decimal  "lat",        precision: 10, scale: 6
+    t.decimal  "lng",        precision: 10, scale: 6
+    t.string   "street"
+    t.string   "state"
+    t.string   "city"
+    t.string   "country"
+    t.string   "zipcode"
+    t.boolean  "active",                              default: true
+    t.string   "api_id"
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
+  end
+
+>>>>>>> parent of 72bbe78... add movie model and migration; helper to build movie from api response
 end
