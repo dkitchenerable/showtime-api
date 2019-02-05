@@ -4,5 +4,7 @@ class Movie < ActiveRecord::Base
   validates_presence_of :release_date
 
   has_and_belongs_to_many :actors
-  has_one :director
+
+  has_one :directors_movie
+  has_one :director, :through => :directors_movie, class_name: 'Director'
 end
