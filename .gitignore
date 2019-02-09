@@ -18,3 +18,5 @@
 
 # weird vim files
 *.swo
+# dont check in environment variables configuration
+.env
