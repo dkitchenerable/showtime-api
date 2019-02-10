@@ -1,10 +1,13 @@
 module Movies
   class Create
     def self.call(movie_response: movie_response)
+      movie = Movie.where(title: movie_response.title, release_date: movie_response.release_date)
+      return movie if movie.present?
+
       genres = genres(names: movie_response.genres)
       actors = actors(cast: movie_response.actors)
       director = director(name: movie_response.director)
-      movie = Movie.find_or_create_by!(
+      movie = Movie.create!(
         title: movie_response.title,
         release_date: movie_response.release_date,
         running_time_minutes: movie_response.running_time_minutes,

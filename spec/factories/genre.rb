@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :genre do
-    name { "Fake Genre" }
+    name { Faker::Music.genre }
   end
 end
