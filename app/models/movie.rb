@@ -4,6 +4,8 @@ class Movie < ActiveRecord::Base
   validates_presence_of :release_date
   validates_presence_of :rating
 
+  validates_uniqueness_of :title, scope: :release_date
+
   has_and_belongs_to_many :actors
   has_and_belongs_to_many :genres
 
