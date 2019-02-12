@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe Movies::Create do      
+describe Movies::Create do
   subject { described_class.call(movie_response: movie_response) }
 
-  let(:movie_response) { FactoryBot.create(:api_response_movie) }
+  let(:movie_response) { FactoryBot.build(:api_response_movie) }
 
   shared_examples "a new actor" do
     it "does create actors" do
