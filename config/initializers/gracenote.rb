@@ -1,0 +1,3 @@
+GRACENOTE_VERSION = ENV.fetch("GRACENOTE_VERSION", "GracenoteV1.1")
+GRACENOTE_API_KEY = ENV.fetch("GRACENOTE_API_KEY")
+$gracenote_client = Clients::Api.new(GRACENOTE_VERSION)
