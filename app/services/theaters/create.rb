@@ -2,7 +2,7 @@ module Theaters
   class Create
     def self.call(theater_response: theater_response)
       theater = Theater.where(name: theater_response.name, zipcode: theater_response.zipcode)
-      return theater if theater.present?
+      return theater.first if theater.present?
 
       Theater.create!(
         name: theater_response.name,

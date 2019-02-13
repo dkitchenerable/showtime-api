@@ -2,7 +2,7 @@ module Movies
   class Create
     def self.call(movie_response: movie_response)
       movie = Movie.where(title: movie_response.title, release_date: movie_response.release_date)
-      return movie if movie.present?
+      return movie.first if movie.present?
 
       genres = genres(names: movie_response.genres)
       actors = actors(cast: movie_response.actors)
@@ -26,6 +26,7 @@ module Movies
       end
       movie.director = director
       movie.save!
+      movie
     end
 
     private
